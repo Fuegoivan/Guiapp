@@ -35,7 +35,7 @@ public class FXMain extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {      
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        Scene scene = new Scene(root, 747, 460);
+        Scene scene = new Scene(root, 547, 340);
         primaryStage.setTitle("BootsShop");
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);

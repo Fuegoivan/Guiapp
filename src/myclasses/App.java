@@ -10,16 +10,12 @@ import entity.Brand;
 import entity.Sneaker;
 import entity.Buyer;
 import entity.History;
-import entity.Role;
 import entity.User;
-import entity.UserRoles;
 import facade.BrandFacade;
 import facade.BuyerFacade;
 import facade.HistoryFacade;
-import facade.RoleFacade;
 import facade.SneakerFacade;
 import facade.UserFacade;
-import facade.UserRolesFacade;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -36,9 +32,7 @@ import java.util.Set;
 public class App {
       
    Scanner scan = new Scanner(System.in);
-   private UserRolesFacade userRolesFacade;
    private UserFacade userFacade;
-   private RoleFacade roleFacade;
    private BuyerFacade buyerFacade;
    private SneakerFacade sneakerFacade;
    private BrandFacade brandFacade;
@@ -46,8 +40,6 @@ public class App {
 //    
    public App(){
       userFacade= new UserFacade();
-      roleFacade= new RoleFacade();
-      userRolesFacade= new UserRolesFacade();
       buyerFacade = new BuyerFacade(Buyer.class);
       sneakerFacade = new SneakerFacade(Sneaker.class);
       brandFacade = new BrandFacade(Brand.class);
@@ -108,9 +100,6 @@ public class App {
                     break;
                 case 12:
                     changeBuyer();
-                    break;
-                case 13:
-                    addSuperUser();
                     break;
                 default:
                     System.out.println("Выберите номер из списка!");
@@ -506,47 +495,7 @@ private void IncomePerMonth(){
             return true;
     }
         return false;
-    }
-    private void addSuperUser(){
-        List<User> users = userFacade.findAll();
-        if(!users.isEmpty()){return;}
-        Buyer buyer = new Buyer();
-        buyer.setBuyerFirstName("Artjom");
-        buyer.setBuyerLastName("Mihhailov");
-        buyer.setBuyerPhone("+3725856732");
-        buyerFacade.create(buyer);
-        User user = new User();
-        user.setLogin("admin");
-        user.setPassword("12345");
-        user.setBuyer(buyer);
-        userFacade.create(user);
-        Role role = new Role();
-        role.setRoleName("ADMINISTRATOR");
-        roleFacade.create(role);
-        UserRoles userRoles = new UserRoles();
-        userRoles.setUser(user);
-        userRoles.setRole(role);
-        userRolesFacade.create(userRoles);
-        
-        role = new Role();
-        role.setRoleName("MANAGER");
-        roleFacade.create(role);
-        userRoles = new UserRoles();
-        userRoles.setUser(user);
-        userRoles.setRole(role);
-        userRolesFacade.create(userRoles);
-        
-        role = new Role();
-        role.setRoleName("BUYER");
-        roleFacade.create(role);
-        userRoles = new UserRoles();
-        userRoles.setUser(user);
-        userRoles.setRole(role);
-        userRolesFacade.create(userRoles);
-        
-       
-    
-}
+    }    
 }
 
 

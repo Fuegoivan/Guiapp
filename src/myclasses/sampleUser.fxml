@@ -1,137 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="dropDownEmpty" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="747.0" style="-fx-background-color: #F4F7FB;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myclasses.FXControllerUser">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="547.0" style="-fx-background-color: #F5F5F5;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myclasses.FXControllerUser">
    <children>
-      <AnchorPane fx:id="gggg" layoutX="200.0" prefHeight="68.0" prefWidth="547.0" style="-fx-background-color: #fff;">
-         <effect>
-            <DropShadow color="#0000001f" />
-         </effect>
-         <children>
-            <ImageView fitHeight="51.0" fitWidth="60.0" layoutX="474.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../pics/logo.png" />
-               </image>
-            </ImageView>
-            <Text fill="#3c3c3c" layoutX="335.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deniss Mihhailov">
-               <font>
-                  <Font name="Panton Black Caps" size="17.0" />
-               </font>
-            </Text>
-         </children>
-      </AnchorPane>
-      <AnchorPane prefHeight="460.0" prefWidth="200.0" style="-fx-background-color: #fff;">
-         <effect>
-            <DropShadow color="#00000040" />
-         </effect>
-         <children>
-            <Button layoutX="14.0" layoutY="130.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: #fafafa; -fx-border-color: #ccc; -fx-border-radius: 5px;" stylesheets="@styles/main.css" text="Добавить кроссовки">
-               <font>
-                  <Font name="Montserrat Regular" size="13.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <ImageView fitHeight="97.0" fitWidth="82.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../pics/sneaklogo.png" />
-               </image>
-            </ImageView>
-            <Text fill="#b2b2b2" layoutX="104.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Программа на Java" textAlignment="CENTER" wrappingWidth="82.00000447034836">
-               <font>
-                  <Font name="Montserrat Bold" size="11.0" />
-               </font>
-            </Text>
-            <Text fill="#3c3c3c" layoutX="103.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Boots Shop">
-               <font>
-                  <Font name="Panton Black Caps" size="17.0" />
-               </font>
-            </Text>
-            <Separator focusTraversable="false" layoutX="14.0" layoutY="110.0" prefHeight="3.0" prefWidth="175.0" style="-fx-background-color: #ccc; -fx-border-style: solid; -fx-border-color: #333;">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </Separator>
-            <Button layoutX="14.0" layoutY="169.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: #a0a0a0; -fx-border-radius: 5px;" stylesheets="@styles/main.css" text="Добавить покупателя" textFill="WHITE">
-               <font>
-                  <Font name="Montserrat Regular" size="13.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="btnMenuBuySneaker" layoutX="14.0" layoutY="209.0" mnemonicParsing="false" onAction="#changeScreenButtonPushedBuy" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: #fafafa; -fx-border-color: #ccc; -fx-border-radius: 5px;" stylesheets="@styles/main.css" text="Купить обувь">
-               <font>
-                  <Font name="Montserrat Regular" size="13.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="btnMenuIncome" layoutX="14.0" layoutY="252.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: #fafafa; -fx-border-color: #ccc; -fx-border-radius: 5px;" stylesheets="@styles/main.css" text="Доход магазина">
-               <font>
-                  <Font name="Montserrat Regular" size="13.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button layoutX="14.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: #f7746a; -fx-border-color: #f7746a; -fx-border-radius: 5px;" stylesheets="@styles/main.css" text="Закрыть программу" textFill="WHITE">
-               <font>
-                  <Font name="Montserrat Regular" size="13.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Separator focusTraversable="false" layoutX="14.0" layoutY="396.0" prefHeight="3.0" prefWidth="175.0" style="-fx-background-color: #fafafa; -fx-border-style: solid; -fx-border-color: #ccc; -fx-border-width: 0;">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </Separator>
-         </children>
-      </AnchorPane>
-      <Text fill="#434343" layoutX="312.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавление покупателя">
+      <Text layoutX="124.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавить Покупателя">
          <font>
-            <Font name="Montserrat Bold" size="29.0" />
+            <Font name="Gabriola" size="24.0" />
          </font>
       </Text>
-      <Button fx:id="btnAddUser" layoutX="385.0" layoutY="315.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: #f7746a; -fx-border-color: #f7746a; -fx-border-radius: 5px;" stylesheets="@styles/main.css" text="Добавить покупателя" textFill="WHITE">
-         <font>
-            <Font name="Montserrat Regular" size="13.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <Text layoutX="249.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите имя покупателя" wrappingWidth="151.24267578124977" />
-      <Text layoutX="249.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите фамилию покупателя" wrappingWidth="169.24267578124977" />
-      <TextField fx:id="txtFieldPhone" layoutX="425.0" layoutY="216.0" prefHeight="25.0" prefWidth="273.0" />
-      <Text layoutX="249.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите телефон покупателя" wrappingWidth="160.57598876953102" />
-      <TextField fx:id="txtFieldLastName" layoutX="433.0" layoutY="177.66666666666666" prefHeight="25.0" prefWidth="265.0" AnchorPane.bottomAnchor="257.0" />
-      <Text fx:id="txtFieldAddSneakerInfo" fill="#00ff2b" layoutX="388.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вы добавили покупателя в базу" wrappingWidth="175.33333333333331" />
-      <TextField fx:id="txtFieldFirstName" layoutX="401.0" layoutY="139.0" prefHeight="25.0" prefWidth="297.0" />
-      <Button fx:id="btnReload" layoutX="385.0" layoutY="315.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: #a0a0a0; -fx-border-color: #a0a0a0; -fx-border-radius: 5px;" stylesheets="@styles/main.css" text="Обнулить" textFill="WHITE">
-         <font>
-            <Font name="Montserrat Regular" size="13.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <TextField fx:id="txtFieldMoney" layoutX="416.0" layoutY="255.0" prefHeight="25.0" prefWidth="281.0" />
-      <Text layoutX="248.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите деньги покупателя" wrappingWidth="160.57598876953102" />
+      <Text layoutX="52.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя покупателя" wrappingWidth="99.90930175781227" />
+      <Text layoutX="52.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия покупателя" wrappingWidth="151.24267578124977" />
+      <TextField fx:id="txtFieldPhone" layoutX="178.0" layoutY="169.0" prefHeight="25.0" prefWidth="190.0" />
+      <Text layoutX="52.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Телефон покупателя" wrappingWidth="160.57598876953102" />
+      <TextField fx:id="txtFieldLast" layoutX="178.0" layoutY="131.0" prefHeight="25.0" prefWidth="190.0" AnchorPane.bottomAnchor="184.0" />
+      <Text layoutX="52.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Деньги покупателя" wrappingWidth="151.24267578124977" />
+      <TextField fx:id="txtFieldMoney" layoutX="178.0" layoutY="206.0" prefHeight="25.0" prefWidth="190.0" />
+      <Text fx:id="txtFieldAddUserInfo" layoutX="-5.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="416.6666768391927" />
+      <TextField fx:id="txtFieldName" layoutX="155.0" layoutY="93.0" prefHeight="25.0" prefWidth="213.0" />
+      <Button fx:id="btnAddUser" layoutX="139.0" layoutY="267.0" mnemonicParsing="false" text="Добавить покупателя" />
+      <AnchorPane layoutX="412.0" layoutY="-2.0" prefHeight="342.0" prefWidth="135.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Button layoutY="33.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" text="Добавить покупателя" />
+            <Button layoutY="3.0" mnemonicParsing="false" onAction="#AddSneaker" prefHeight="25.0" prefWidth="135.0" text="Добавить обувь" />
+            <Button layoutY="63.0" mnemonicParsing="false" onAction="#EditSneaker" prefHeight="25.0" prefWidth="135.0" text="Совершить покупку" />
+            <Button layoutY="93.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" />
+            <Button layoutY="123.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" />
+            <Button layoutY="153.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" />
+            <Button layoutY="183.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" />
+            <Button layoutX="-1.0" layoutY="213.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" />
+            <Text layoutX="36.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Программа на джаве BootsStore" wrappingWidth="63.470123291015625" />
+         </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.4068767726421356" />
+               </color>
+            </DropShadow>
+         </effect>
+      </AnchorPane>
+      <Text layoutX="150.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ivan Tabakov SPTV20" wrappingWidth="124.13670349121094" />
    </children>
 </AnchorPane>

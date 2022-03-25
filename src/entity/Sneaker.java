@@ -23,7 +23,7 @@ public class Sneaker implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String sneakerModel;
-    @OneToOne
+    @OneToOne 
     private Brand sneakerFirm;
     private double sneakerSize;
     private double sneakerPrice;
